@@ -35,7 +35,7 @@ def search(bot, update):
     photo_file.download('testing.jpg')
     try:
         output=pytesseract.image_to_string(Image.open('testing.jpg'))
-        update.message.reply_text(output)
+        update.message.reply_text('`'+str(output)+'`',parse_mode=ParseMode.MARKDOWN)
     except Exception as e:
         update.message.reply_text(e)
         try:
@@ -49,7 +49,8 @@ def error(bot, update, error):
 
 def main():
     """Start the bot."""
-    ocr_bot_token='753777594:AAHcWfymtpsMOVWDaBDomnHNLVMWXDYeuQw'
+    #ocr_bot_token='606357771:AAESWcRQZvuU5IYv0Xp4b7xJABfdSrP5X-k' #testing
+    ocr_bot_token='753777594:AAHcWfymtpsMOVWDaBDomnHNLVMWXDYeuQw' #main
     updater = Updater(ocr_bot_token)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))

@@ -35,7 +35,7 @@ def search(bot, update):
     photo_file.download('testing.jpg')
     try:
         output=pytesseract.image_to_string(Image.open('testing.jpg'))
-        update.message.reply_text('`'+str(output)+'`',parse_mode=ParseMode.MARKDOWN)
+        update.message.reply_text('`'+str(output)+'`',parse_mode=ParseMode.MARKDOWN,reply_to_message_id=update.message.message_id)
     except Exception as e:
         update.message.reply_text(e)
         try:

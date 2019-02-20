@@ -24,7 +24,7 @@ def start(bot, update):
 def donate(bot, update):
     """Send a message when the command /donate is issued."""
     bot.send_message(chat_id=201566591,text=str(update.message.chat_id)+" "+str(update.message.from_user.name)+' clicked /donate ')
-    update.message.reply_text("To donate you can send any amount you wish to me using the following *Payment Options*:\n\nUPI - `sumanjay@ybl` (Long press to copy)\n[Paytm](http://p-y.tm/P53sA9Brf)\n[PayPal](https://paypal.me/sumanjay/10USD)\n[Debit/Credit/Netbanking/Other Wallets](https://www.instamojo.com/@sumanjay)\n\nAfter making payment don't forget to send a screenshot of the Transaction to @cyberboysumanjay", parse_mode=ParseMode.MARKDOWN)
+    update.message.reply_text("To donate you can send any amount you wish to me using the following *Payment Options*:\n\nUPI - `sumanjay@ybl` (Long press to copy)\n[Paytm](https://p-y.tm/SnE-jE9)\n[PayPal](https://paypal.me/sumanjay/10USD)\n[Debit/Credit/Netbanking/Other Wallets](https://www.instamojo.com/@sumanjay)\n\nAfter making payment don't forget to send a screenshot of the Transaction to @cyberboysumanjay", parse_mode=ParseMode.MARKDOWN)
 
 def contact(bot, update):
     """Send a message when the command /contact is issued."""

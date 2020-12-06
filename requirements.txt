@@ -1,3 +1,2 @@
-telegram==0.0.1
 python-telegram-bot
 pytesseract
